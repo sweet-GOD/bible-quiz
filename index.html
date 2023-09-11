@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bible Quiz</title>
+    <link
+      rel="shortcut icon"
+      href="asset/Group 1GODlogo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <a style="color: #fff; font-weight: 600; font-size: 24px;" class="py-2" href="leaderboar.html">View Leaderboard</a>
+    <div id="quest">
+      <div id="timer"></div>
+      <div class="question" id="question"></div>
+      <div class="answer-options" id="answerOptions"></div>
+      <div class="btn-container">
+        <button class="btn shadow" id="prevBtn">Prev</button>
+        <button class="btn shadow" id="nextBtn">Next</button>
+        <button class="btn shadow" id="submitBtn">Submit</button>
+      </div>
+      <div class="result" id="result"></div>
+    </div>
+    <div id="rewardContainer" class="reward-container">
+      <p id="rewardMessage" class="reward-message"></p>
+    </div>
+    <div class="social-sharing">
+      <div class="shareText">Share your score:</div>
+      <button id="facebookShareBtn" class="btn social-button shadow"
+        ><i class="bi bi-facebook shadow"></i
+      ></button>
+      <button id="twitterShareBtn" class="btn social-button shadow"
+        ><i class="bi bi-twitter shadow"></i
+      ></button>
+      <button id="whatsShareBtn" class="btn social-button shadow"
+        ><i class="bi bi-whatsapp shadow"></i
+      ></button>
+    </div>
+    <div id="rewardContainer" class="reward-container">
+        <p id="rewardMessage" class="reward-message"></p>
+        <p>Your final score: <span id="finalScore"></span></p>
+        <input type="text" id="usernameInput" placeholder="Enter your username">
+        <button id="submitScoreBtn" class="btn btn-primary">Submit Score</button>
+    </div>
+    
+      
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <!-- <script src="leaderboard.js"></script> -->
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+body {
+    font-family: 'Georgia', serif;
+    background: url(asset/339f87f8ee415af5aaa648ddb595164e.jpeg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 7%;
+}
+
+#quest {
+    background-color: #ffffffa3;
+    backdrop-filter: blur(50px);
+    border-radius: 50px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+#question {
+    font-size: 2rem !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.answer-btn {
+    /* background: red !important; */
+    color: #fff;
+    border: none;
+    border-radius: 50px !important;
+    padding: 10px 20px;
+    font-size: 2rem !important;
+    border: 1px dotted rgba(0, 128, 0, 0.333) !important;
+    color: green !important;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.3s;
+}
+
+.answer-btn.selected {
+    background-color: #4CAF50 !important;
+    color: #fff !important;
+}
+
+.answer-btn:hover {
+    background-color: rgba(0, 128, 0, 0.165) !important;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 80px;
+}
+
+.btn {
+    width: 100% ;
+    background-color: #2196F3 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 40px !important;
+    padding: 14px 0 !important;
+    font-size: 1.2rem !important;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1769aa;
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #2196F3;
+}
+
+/* Style for correct answer */
+.answer-btn.correct {
+    background-color: #4CAF50 !important;
+    color: #fff;
+}
+
+/* Style for wrong answer */
+.answer-btn.wrong {
+    background-color: #FF5733 !important;
+    color: #fff;
+}
+
+/* Disable hovering for answer buttons */
+.answer-btn:hover {
+    background-color: #ddd !important;
+    /* cursor: not-allowed; */
+}
+.answer-btn.incorrect{
+    background-color: #FF5733 !important;
+}
+
+.reward-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reward-container.show {
+    display: block;
+}
+
+.reward-message {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-sharing {
+    position: fixed;
+    bottom: 8px;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.social-button {
+    background-color: #ffffff !important;
+    color: rgb(0, 0, 0) !important;
+    border: none;
+    border-radius: 50%;
+    /* padding: 10px 20px; */
+    font-size: 16px !important;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-button:hover {
+    background-color: #2980b9;
+}
+
+.shareText{
+    /* width: 100%; */
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Add this CSS to your existing styles or create a new CSS file */
+
+/* ... (Your existing styles) ... */
+
+/* Style for the reward container */
+.reward-containerr {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reward-containerr.show {
+    display: flex !important;
+    flex-direction: column; /* Adjust to stack elements vertically */
+    align-items: center; /* Center align elements */
+}
+
+.reward-message {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Style for the username input field */
+#usernameInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Style for the submit score button */
+#submitScoreBtn {
+    background-color: #2196F3 !important;
+    color: #fff !important;
+    border: none;
+    border-radius: 40px !important;
+    padding: 14px 30px !important;
+    font-size: 1.2rem !important;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#submitScoreBtn:hover {
+    background-color: #1769aa;
+}
+
+/* Media query for mobile phones */
+@media (max-width: 900px) {
+    body {
+        font-size: 14px !important; /* Adjust font size for better readability on smaller screens */
+    }
+
+    #quest{
+        width: 90%;
+    }
+
+    #question{
+        font-size: 1.4rem !important;
+    }
+
+    .btn {
+        font-size: 1rem !important; /* Adjust button font size for smaller screens */
+    }
+
+    .answer-options {
+        grid-template-columns: 1fr !important; /* Display answer options in a single column on mobile */
+        gap: 5px !important; /* Reduce gap between answer buttons on mobile */
+    }
+}
